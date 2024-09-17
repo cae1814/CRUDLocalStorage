@@ -51,10 +51,8 @@ export const EjercicioCrudLocalStorage = () => {
     try {
       
       const index = prov.findIndex(prov => prov.id === id);
-
-      alertReactCrud('find{'+id+'}, index{'+index+'}','error');  
+      
       if (index !== -1){
-        alertReactCrud('mod{'+id+'}, index{'+index+'}','error');  
         prov[index] = jsonProv;
         localStorage.setItem('provList', JSON.stringify(prov));
       } else {
